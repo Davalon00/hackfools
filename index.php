@@ -17,7 +17,7 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
+    <link href="img/logoeach2.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -98,7 +98,7 @@
     </div>
 
     <!-- MODAL CADASTRAR -->
-    <div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="modalCadastrarLabel" aria-hidden="true">
+		<div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="modalCadastrarLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -118,16 +118,17 @@
                         <input type="email" name="email" id="email" class="form-control" placeholder="Insira seu email" required maxlength="100">
                       </div>
                       <div class="form-group">
-                        <label for="senha">Senha:</label>
-                        <input type="password" name="senha" id="senha" class="form-control" placeholder="Insira sua senha" required maxlength="20">
+                        <label for="senha2">Senha:</label>
+                        <input type="password" name="senha2" id="senha2" class="form-control" placeholder="Insira a da senha" required>
                       </div>
                       <div class="form-group">
                         <label for="confirmarSenha">Confirmar senha:</label>
-                        <input type="password" name="confirmarSenha" id="confirmarSenh+a" class="form-control" placeholder="Insira a confirmação da senha" required>
+                        <input type="password" name="confirmarSenha" id="confirmarSenha" class="form-control" placeholder="Insira a confirmação da senha" required>
                       </div>
+
                       <div class="form-group">
                         <label for="numusp">Número USP:</label>
-                        <input type="number" name="numusp" id="numusp" class="form-control" placeholder="Insira seu número USP" required  maxlength="8">
+                        <input type="text" name="numusp" id="numusp" class="form-control" placeholder="Insira seu número USP" required  maxlength="8" onkeyup="somenteNumeros(this);">
                       </div>
                       <div class="form-group">
                         <label for="curso">Curso:</label>
@@ -151,7 +152,7 @@
                       </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary botao-vermelho cinza" data-dismiss="modal"> Fechar </button>
-                            <button type="submit" class="btn btn-primary btn-lg botao-vermelho" oninvalid="">Cadastrar</button>
+                            <button type="submit" class="btn btn-primary btn-lg botao-vermelho">Cadastrar</button>
                         </div>
                     </form>
                 </div>
@@ -340,8 +341,7 @@
 
                     <div class="col-lg-6 col-md-6 footer-info">
                         <img src="img/logoeach.png" alt="TheEvenet">
-                        <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate
-                            cupiditate debitis accusamus repellat cumque.</p>
+                        <p>A Escola de Artes, Ciências e Humanidades (EACH - USP), localizada no campus USP Leste e por isso comumente referida assim, é uma unidade de ensino, pesquisa e extensão da Universidade de São Paulo. Foi inaugurada no dia 27 de fevereiro de 2005 e pertence ao segmento leste do campus da Capital da Universidade de São Paulo, estando localizada no distrito de Ermelino Matarazzo, às margens da rodovia Ayrton Senna, ao lado do Parque Ecológico do Tietê e da estação de trem USP Leste da CPTM.</p>
                     </div>
 
                     <div class="col-lg-6 col-md-6 footer-contact">
@@ -383,7 +383,36 @@
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
+    <!-- JavaScript Libraries --><script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- JavaScript Libraries -->
+    <script type="text/javascript">
+
+      var senha = document.getElementById("senha2");
+      var confirmarSenha = document.getElementById("confirmarSenha");
+
+
+      function validarSenha(){
+        console.log(senha.value);
+        console.log(confirmarSenha.value)
+        if(senha.value != confirmarSenha.value) {
+          confirmarSenha.setCustomValidity("Senhas diferentes!");
+        } else {
+          confirmarSenha.setCustomValidity("");
+        }
+      }
+
+      senha.onchange = validarSenha;
+      confirmarSenha.onkeyup = validarSenha;
+
+			function somenteNumeros(num) {
+        var er = /[^0-9.]/;
+        er.lastIndex = 0;
+        var numusp = num;
+        if (er.test(numusp.value)) {
+          numusp.value = "";
+        }
+			}
+    </script>
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>

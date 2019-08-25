@@ -14,7 +14,9 @@
 		<title>Eventos</title>
 	</head>
 	<body>
-		<h1>Listagem de Eventos</h1>
+		<div>
+				<h1 style="background-color: #9193a1; color: #fff; height:6%; border-bottom: 2px solid #595959; border-top: 2px solid #595959; ">Listagem de Eventos</h1>
+		</div>
 
 		<table class="table table-striped table-light">
                 <thead>
@@ -50,7 +52,7 @@
                                 <input type="hidden" name="horaf" 		  value="<?=$dados['horaf_evento'] 		 ?>">
 																<input type="hidden" name="descricao" 	value="<?=$dados['descricao_evento'] ?>">
                                 <button class="btn btn-primary">
-                                    <i class="fas fa-pencil-alt"></i>
+                                    Editar
                                 </button>
                             </form>
 
@@ -59,7 +61,7 @@
                             <form class="delete" method="POST" action="./php/dbDeletarEvento.php">
                                 <input type="hidden" name="id_evento" value="<?=$dados['id_evento']?>">
                                 <button class="btn btn-danger">
-                                    <i class="far fa-trash-alt"></i>
+                                    Apagar
                                 </button>
                             </form>
                         </td>
@@ -71,10 +73,14 @@
 
 
 		<a href="home.php">
-
 			<button class="btn btn-danger btn-sm">Retornar</button>
-
 		</a>
+		<a href="cadastroEvento.php">
+			<button class="btn btn-success btn-sm">Cadastrar evento</button>
+		</a>
+			<button class="btn btn-success btn-sm">Emitir certificado</button>
+
+
 
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 

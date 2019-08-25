@@ -20,7 +20,7 @@ $name = $_SESSION['name'];
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
+    <link href="img/logoeach2.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -411,8 +411,7 @@ $name = $_SESSION['name'];
 
                     <div class="col-lg-6 col-md-6 footer-info">
                         <img src="img/logoeach.png" alt="TheEvenet">
-                        <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate
-                            cupiditate debitis accusamus repellat cumque.</p>
+                        <p>A Escola de Artes, Ciências e Humanidades (EACH - USP), localizada no campus USP Leste e por isso comumente referida assim, é uma unidade de ensino, pesquisa e extensão da Universidade de São Paulo. Foi inaugurada no dia 27 de fevereiro de 2005 e pertence ao segmento leste do campus da Capital da Universidade de São Paulo, estando localizada no distrito de Ermelino Matarazzo, às margens da rodovia Ayrton Senna, ao lado do Parque Ecológico do Tietê e da estação de trem USP Leste da CPTM.</p>
                     </div>
 
                     <div class="col-lg-6 col-md-6 footer-contact">
