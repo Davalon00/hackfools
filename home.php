@@ -60,7 +60,16 @@ $name = $_SESSION['name'];
                     <li><a href="#speakers" style="font-size: 20px; margin-top: -4px;"> Eventos </a></li>
                     <li><a href="#calendar" style="font-size: 20px; margin-top: -4px;"> Calendário </a></li>
                     <li><a href="#contact" style="font-size: 20px; margin-top: -4px;"> Contato </a></li>
-                    <li><a href="dashboard.php" style="font-size: 20px; margin-top: -4px;"> Gerenciar </a></li>
+                    <li>
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" style="font-size: 20px; margin-top: -4px;" data-toggle="dropdown">Gerenciar</a>
+                        <ul class="dropdown-item">
+                          <li><a class="dropdown-item" href="listarCoordenador.php">Coordenadores</a></li>
+                          <li><a class="dropdown-item" href="listarProfessor.php">Professores</a></li>
+                          <li><a class="dropdown-item" href="listarAluno.php">Alunos</a></li>
+                          <li><a class="dropdown-item" href="listarEntidade.php">Entidades</a></li>
+                          <li><a class="dropdown-item" href="listarEvento.php">Eventos</a></li>
+                        </ul>
+                    </li>
                     <li class="buy-tickets"><a style="background-color: white; font-size: 20px;" class="btn btn-primary" ><strong style="color: black;"><?=$name?></strong></a></li>
                     <li class="buy-tickets"><a style="background-color: white; font-size: 20px;" href="./php/logout.php" class="btn btn-primary"><strong style="color: black;">Sair</strong></a></li>
                 </ul>
